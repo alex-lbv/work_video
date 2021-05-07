@@ -1,0 +1,102 @@
+.tabs {
+  padding: 40px 0 100px;
+
+  @media screen and (max-width: 767px) {
+    padding: 20px 0 50px;
+  }
+
+  .tab-container {
+    background-color: #125688;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .tab-title {
+    color: #fff;
+    margin: 10px;
+    font: 400 18px/20px Play;
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+
+  .tab-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: sans-serif;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  .tab-wrapper .tab-item,
+  .tab-wrapper input {
+    display: none;
+  }
+
+  .tab-wrapper .tab-item {
+    background-color: #fff;
+    width: calc(100% - 40px);
+    max-width: 100%;
+    padding: 100px 20px 100px;
+    order: 1;
+
+    @media screen and (max-width: 767px) {
+      padding: 20px .5em 20px;
+      width: 100%;
+    }
+
+    p {
+      font: 400 20px/32px Play;
+      color: #939393;
+
+      @media screen and (max-width: 767px) {
+        font: 400 17px/32px Play;
+      }
+    }
+  }
+
+  .tab-wrapper label {
+    height: 55px;
+    min-width: 50px;
+    padding: 0 20px;
+    text-align: center;
+    color: #353535;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font: 400 24px/28px Play;
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      min-width: inherit;
+      height: inherit;
+      padding: 0 5px;
+    }
+  }
+
+  .no-select {
+    user-select: none
+  }
+
+  .tab-wrapper input:checked + label {
+    border-bottom: 2px solid #BE9F7B;
+  }
+
+  .tab-wrapper input:checked + label + .tab-item {
+    display: block;
+  }
+}

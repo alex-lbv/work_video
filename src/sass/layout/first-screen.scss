@@ -1,0 +1,84 @@
+.first-screen {
+  position: relative;
+  padding-top: 15.938em;
+  height: 100vh;
+  background: #181818;
+  backdrop-filter: blur(0.25em);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .title {
+    margin-bottom: 1em;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 2em;
+    }
+  }
+
+  &__background {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media screen and (max-width: 1100px) {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(24, 24, 24, 0.8);
+    }
+
+    video {
+      height: 100vh;
+    }
+  }
+
+  .btn {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1100px) {
+      margin-top: 1em;
+    }
+  }
+
+  &__description {
+    margin-bottom: 2.25em;
+    max-width: 50%;
+    text-align: center;
+    font: 400 1.25em/1.75em Play;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 767px) {
+      max-width: 95%;
+      margin-bottom: 2em;
+      font: 400 1.1em/1.5em Play;
+    }
+  }
+
+  &__link {
+    font: 400 1.25em/1.75em Play;
+    color: #BE9F7B;
+    text-decoration-line: underline;
+
+    @media screen and (max-width: 767px) {
+      font: 400 1.2em/1.4em Play;
+    }
+  }
+}

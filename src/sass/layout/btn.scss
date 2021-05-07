@@ -1,0 +1,34 @@
+.btn {
+  width: 100%;
+  padding: 0.688em 3.125em;
+  font: 400 1.5em/1.2em Play;
+  border-radius: 1.5em;
+  text-transform: uppercase;
+  transition: background-color .3s ease-in, color .3s ease-in;
+
+  @media screen and (max-width: 767px) {
+    padding: 0.688em 3.125em;
+    font: 400 1.1em/1.2em Play;
+  }
+
+  &--light {
+    color: #ffffff;
+    border: 0.063em solid #BE9F7B;
+    max-width: 17em;
+
+    &:hover {
+      background-color: #BE9F7B;
+    }
+  }
+
+  &--dark {
+    border: 0.063em solid #353535;
+    max-width: 20em;
+    color: #353535;
+
+    &:hover {
+      color: #FFFFFF;
+      background-color: #353535;
+    }
+  }
+}

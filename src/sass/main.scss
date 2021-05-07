@@ -1,0 +1,27 @@
+@import "../../node_modules/normalize.css/normalize.css";
+
+@import "utilities/mixins";
+@import "utilities/variables";
+
+@import "base/fonts";
+@import "base/general";
+
+@import "layout/header";
+@import "layout/first-screen";
+@import "layout/btn";
+@import "layout/services";
+@import "layout/working";
+@import "layout/features";
+@import "layout/partners";
+@import "layout/info";
+@import "layout/footer";
+
+@import "layout/map";
+@import "layout/text-section";
+@import "layout/image-section";
+@import "layout/reviews";
+@import "layout/gallery";
+@import "layout/promotions";
+@import "layout/form";
+@import "layout/compare";
+@import "layout/tabs";

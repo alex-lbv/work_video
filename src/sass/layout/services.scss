@@ -1,0 +1,146 @@
+.services {
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8.75em;
+    padding-bottom: 5.6em;
+    background: #ffffff;
+
+    @media screen and (max-width: 1099px) {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+  }
+
+  .subtitle {
+    margin-bottom: 1.5em;
+  }
+
+  &__description {
+    margin: auto;
+    max-width: 33em;
+    font: 400 1.25em/1.75em Play;
+    color: #939393;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      font: 400 1.1em/1.5em Play;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  &__card {
+    position: relative;
+    width: 33.3%;
+    min-height: 16.688em;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      min-height: 11.125em;
+    }
+
+    @media screen and (max-width: 1099px) {
+      width: 50%;
+      min-height: 15.938em;
+    }
+
+    @media screen and (max-width: 1200px) {
+      min-height: 13em;
+    }
+
+    a {
+      display: block;
+      position: relative;
+      height: 100%;
+
+      @media screen and (max-width: 767px) {
+        display: flex;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.62) 100%);
+        z-index: 1;
+        transition: background-color .4s ease-in;
+      }
+
+      &:hover {
+        &::before {
+          background-color: rgba(190, 159, 123, 0.7);
+        }
+
+        .services__hidden-list {
+          opacity: 1;
+        }
+
+        span {
+          transform: translateY(-2.5em);
+          text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25)
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+      width: 100%;
+      height: auto;
+    }
+
+    span {
+      padding-top: 3em;
+      display: block;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      font: 400 2em/1.2em Play;
+      color: #FFFFFF;
+      transition: transform .5s ease-in;
+
+      @media screen and (max-width: 767px) {
+        padding: 0;
+        display: block;
+        margin: auto;
+        font: 400 1.7em/1.2em Play;
+      }
+
+      @media screen and (max-width: 1200px) {
+        font: 400 1.5em/1.2em Play;
+      }
+    }
+  }
+
+  &__hidden-list {
+    z-index: 1;
+    position: absolute;
+    bottom: 10%;
+    opacity: 0;
+    width: 100%;
+    transition: opacity .5s ease-in;
+
+    li {
+      text-align: center;
+      font: 400 1.25em/1.75em Play;
+      color: #FFFFFF;
+
+      &:not(:last-of-type) {
+        margin-bottom: 0.625em;
+      }
+    }
+  }
+}

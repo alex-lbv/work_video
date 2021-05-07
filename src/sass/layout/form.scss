@@ -1,0 +1,149 @@
+.form {
+  background-color: #181818;
+  border-bottom: 0.063em solid #939393;
+
+  .subtitle {
+    color: #FFFFFF;
+    margin-bottom: 1.5em;
+
+    @media screen and (max-width: 1099px) {
+      font-size: 1.375em;
+    }
+  }
+
+  &__container {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__description {
+    margin-bottom: 2.5em;
+    font: 400 1.25em/1.75em Play;
+    color: #939393;
+
+    @media screen and (max-width: 1099px) {
+      text-align: center;
+      font-size: 1.125em;
+    }
+  }
+
+  form {
+    width: 80%;
+
+    @media screen and (max-width: 1099px) {
+      width: 90%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @media screen and (max-width: 1099px) {
+      flex-direction: column;
+    }
+
+    & > div {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (max-width: 1099px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__input {
+    outline: none;
+    padding: 0.938em 0;
+    margin-bottom: 0.938em;
+    width: 70%;
+    font: 400 1em/1.75em Play;
+    border-bottom: 0.063em solid #939393;
+    color: #939393;
+
+    @media screen and (max-width: 1099px) {
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: #939393;
+    }
+  }
+
+  &__select {
+    padding: 0.938em 0;
+    margin-bottom: 2em;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 0.063em solid #939393;
+    background-color: transparent;
+    color: #939393;
+    font: 400 1em/1.75em Play;
+  }
+
+  &__textarea {
+    padding: 0.75em;
+    width: 100%;
+    height: 7.813em;
+    outline: none;
+    border: 0.063em solid rgba(147, 147, 147, 1);
+    background-color: transparent;
+    color: #939393;
+    font: 400 1em/1.75em Play;
+  }
+
+  &__privacy-policy {
+    width: 34.375em;
+    margin: 3em auto 3em;
+
+    @media screen and (max-width: 1099px) {
+      padding-left: 2.625em;
+      width: 100%;
+    }
+
+    label {
+      cursor: pointer;
+      position: relative;
+      font: 400 1em/1.75em Play;
+      color: #939393;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -2.625em;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 2em;
+        height: 2em;
+        border: 0.063em solid rgba(190, 159, 123, 1);
+      }
+    }
+
+    & input:checked + label::after {
+      content: '';
+      position: absolute;
+      left: -2.188em;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 1.063em;
+      height: 0.75em;
+      background-image: url("../img/check.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .btn {
+    display: block;
+    margin: auto;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
+}

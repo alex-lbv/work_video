@@ -1,0 +1,23 @@
+.map {
+  &__container {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  .subtitle {
+    display: block;
+    text-align: center;
+    &:after {
+      width: 5em;
+    }
+  }
+
+  &__iframe {
+    iframe{
+      transition: filter .5s ease-in;
+      &:hover {
+        filter: none !important;
+      }
+    }
+  }
+}

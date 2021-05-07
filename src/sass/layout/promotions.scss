@@ -1,0 +1,107 @@
+.promotions {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1099px) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    height: 30em;
+
+    @media screen and (max-width: 1099px) {
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      min-height: 30em;
+      cursor: pointer;
+
+      @media screen and (max-width: 1099px) {
+        width: 100%;
+        height: 25em;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.62) 100%);
+        transition: opacity .5s ease-in;
+      }
+
+      &:hover {
+        &::after {
+          opacity: .3;
+        }
+
+        .promotions__title {
+          transform: translateY(-4em);
+          text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25)
+        }
+
+        p {
+          opacity: 1;
+          transform: translateY(40%);
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      padding: 1.25em 0.938em;
+      background-color: #353535;
+      opacity: 0;
+      position: absolute;
+      transform: translateY(80%);
+      top: 20%;
+      height: 100%;
+      font: 400 1.375em/1.375em Play;
+      color: #FFFFFF;
+      transition: transform .6s ease-in;
+    }
+  }
+
+  &__title {
+    padding-top: 6em;
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font: 400 2em/1.75em Play;
+    color: #FFFFFF;
+    transition: transform .6s ease-in;
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin: auto;
+      width: 2em;
+      height: .05em;
+      bottom: -.4em;
+      left: 0;
+      right: 0;
+      background-color: #BE9F7B;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.compare {
+  padding: 2.75em 0 5em;
+  background-color: #EAEAEB;
+
+  &__container {
+    @media screen and (max-width: 767px) {
+      overflow-x: scroll;
+      overflow-scrolling: touch;
+    }
+  }
+
+  .subtitle {
+    display: block;
+    text-align: center;
+    margin-bottom: 3em;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 2.5em;
+      font-size: 1.25em;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-spacing: 0 1.875em;
+
+    @media screen and (max-width: 767px) {
+      border-spacing: 0 0.625em;
+    }
+
+    &-titles {
+      margin-bottom: 2.063em;
+      font: 400 1.25em/1.438em Play;
+      color: #BE9F7B;
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 1.25em;
+        font: 400 1em/1.125em Play;
+      }
+
+      td {
+        border-bottom: none !important;
+
+        @media screen and (max-width: 767px) {
+          padding: 0 2.5em;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &-name {
+      width: 25%;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        font: 400 1.25em/1.438em Play;
+        padding: 0.5em 0 .5em;
+        border: 0.063em solid #939393;
+        border-radius: 1.5em;
+        color: #181818;
+
+        @media screen and (max-width: 767px) {
+          font: 400 1em/1.125em Play;
+          padding: 0.625em;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    tr {
+      position: relative;
+      border-bottom: 0.063em solid grey;
+    }
+
+    th {
+      min-width: 25%;
+      padding: 1.563em 0;
+      border-bottom: 0.063em solid grey;
+      font: 400 1.25em/1.438em Play;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 767px) {
+        font: 400 1em/1.125em Play;
+      }
+    }
+
+    td {
+      text-align: center;
+      border-bottom: 0.063em solid grey;
+      font: 400 1.25em/1.438em Play;
+
+      @media screen and (max-width: 767px) {
+        font: 400 1em/1.125em Play;
+      }
+    }
+  }
+}
