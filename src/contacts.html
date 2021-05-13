@@ -136,6 +136,35 @@
         </div>
     </div>
 </footer>
+
+<div class="cost">
+    <div class="cost__bg"></div>
+    <div class="container">
+        <form class="cost__form" action="">
+            <h3 class="subtitle">Оставьте заявку</h3>
+            <p class="cost__description">Мы поможем вам рассчитать стоимость в течении 5 минут</p>
+            <div class="cost__form-inputs">
+                <label>
+                    <input type="text" placeholder="Ваше Имя">
+                </label>
+                <label>
+                    <input type="tel" placeholder="Номер телефона">
+                </label>
+            </div>
+            <div class="cost__privacy-policy">
+                <input class="visually-hidden" id="privacy-policy-cost" type="checkbox" checked>
+                <label for="privacy-policy-cost">Я согласен(а) с политикой конфиденциальности<br/>и обработку данных</label>
+            </div>
+            <button class="btn btn--light" type="submit">Заказать консультацию</button>
+            <button type="button" class="cost__close">
+                <svg width="24" height="24">
+                    <use xlink:href="img/symbol/sprite.svg#close"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./js/scripts.js" type="module"></script>
 </body>

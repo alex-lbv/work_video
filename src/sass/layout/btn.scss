@@ -5,6 +5,7 @@
   border-radius: 1.5em;
   text-transform: uppercase;
   transition: background-color .3s ease-in, color .3s ease-in;
+  outline: none;
 
   @media screen and (max-width: 767px) {
     padding: 0.688em 3.125em;

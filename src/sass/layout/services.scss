@@ -43,7 +43,8 @@
 
     @media screen and (max-width: 767px) {
       width: 100%;
-      min-height: 11.125em;
+      //min-height: 11.125em;
+      min-height: 18em;
     }
 
     @media screen and (max-width: 1099px) {
@@ -76,18 +77,26 @@
         transition: background-color .4s ease-in;
       }
 
-      &:hover {
-        &::before {
-          background-color: rgba(190, 159, 123, 0.7);
+      .services__hidden-list {
+        @media screen and (max-width: 1200px){
+          min-height: 8.125em;
         }
+      }
 
-        .services__hidden-list {
-          opacity: 1;
-        }
+      @media screen and (min-width: 1200px){
+        &:hover {
+          &::before {
+            background-color: rgba(190, 159, 123, 0.7);
+          }
 
-        span {
-          transform: translateY(-2.5em);
-          text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25)
+          .services__hidden-list {
+            opacity: 1;
+          }
+
+          span {
+            transform: translateY(-2.5em);
+            text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25)
+          }
         }
       }
     }
@@ -99,7 +108,8 @@
       top: 0;
       margin: auto;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
 
     span {
@@ -116,11 +126,35 @@
         padding: 0;
         display: block;
         margin: auto;
-        font: 400 1.7em/1.2em Play;
+        font: 400 1.8em/1.2em Play;
       }
 
       @media screen and (max-width: 1200px) {
-        font: 400 1.5em/1.2em Play;
+        font: 400 1.8em/1.2em Play;
+      }
+    }
+
+    &.opened {
+      a {
+        &::before {
+          background-color: rgba(190, 159, 123, 0.7);
+        }
+
+        .services__hidden-list {
+          opacity: 1;
+        }
+
+        span {
+          text-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+
+          @media screen and (max-width: 767px) {
+            transform: translateY(-3em);
+          }
+
+          @media screen and (max-width: 1200px) {
+            transform: translateY(-2em);
+          }
+        }
       }
     }
   }

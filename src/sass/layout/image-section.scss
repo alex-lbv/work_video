@@ -5,6 +5,39 @@
     padding-top: 1.875em;
   }
 
+  &__title {
+    padding: 0;
+    margin: 0 0 50px;
+    display: inline-block;
+    position: relative;
+    font: 400 24px/27px Play;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      margin-left: 20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin: auto;
+      width: 8em;
+      height: .05em;
+      bottom: -.8em;
+      left: 0;
+      background-color: #BE9F7B;
+    }
+  }
+
+  &__time {
+    font: 400 20px/32px Play;
+    color: #181818;
+
+    @media screen and (max-width: 767px) {
+      margin-left: 20px;
+    }
+  }
+
   .subtitle {
     display: block;
     text-align: center;
