@@ -2,7 +2,8 @@
   padding-top: 7.188em;
 
   @media screen and (max-width: 767px) {
-    padding-top: 1.875em;
+    //padding-top: 1.875em;
+    padding-top: 4em;
   }
 
   &__title {
@@ -82,7 +83,7 @@
       color: #939393;
 
       @media screen and (max-width: 767px) {
-        font-size: 1.125em;
+        font-size: 1.1em;
         padding: 0 .5em;
       }
     }

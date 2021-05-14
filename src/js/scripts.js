@@ -72,14 +72,18 @@ const swiperPartners = new Swiper(".partners-swiper", {
   },
 });
 
-const swiperGallery = new Swiper(".gallery-swiper", {
-  loop: true,
-  slidesPerView: 1,
-  centeredSlides: true,
-  navigation: {
-    nextEl: ".gallery__button-next",
-    prevEl: ".gallery__button-prev",
-  },
+document.querySelectorAll(".gallery-swiper").forEach(function (slider, index) {
+  slider.classList.add("gallery-swiper--" + index);
+  var currentSlider = document.querySelector(".gallery-swiper--" + index);
+  window["swiper" + index] = new Swiper(".gallery-swiper--" + index, {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".gallery__button-next--" + index,
+      prevEl: ".gallery__button-prev--" + index,
+    },
+  });
 });
 
 menuButton.addEventListener('click', openMenu);
