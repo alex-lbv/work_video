@@ -3,7 +3,6 @@
   padding-top: 15.938em;
   height: 100vh;
   background: #181818;
-  backdrop-filter: blur(0.25em);
 
   @media screen and (min-width: 768px){
     min-height: 600px;
@@ -44,10 +43,13 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: rgba(24, 24, 24, 0.8);
+      background: rgba(24, 24, 24, 0.4);
     }
 
     video {
+      width: 100%;
+      min-height: 600px;
+      object-fit: cover;
       height: 100vh;
     }
   }

@@ -74,7 +74,6 @@ const swiperPartners = new Swiper(".partners-swiper", {
 
 document.querySelectorAll(".gallery-swiper").forEach(function (slider, index) {
   slider.classList.add("gallery-swiper--" + index);
-  var currentSlider = document.querySelector(".gallery-swiper--" + index);
   window["swiper" + index] = new Swiper(".gallery-swiper--" + index, {
     loop: true,
     slidesPerView: 1,
@@ -92,10 +91,11 @@ window.addEventListener('scroll', windowScroll);
 if (window.innerWidth < 1099) {
   document.addEventListener('scroll', mobileServices);
   document.addEventListener('scroll', mobilePromotions);
-} else {
+}
+/* else {
   document.removeEventListener('scroll', mobileServices);
   document.removeEventListener('scroll', mobilePromotions)
-}
+}*/
 
 const isEscEvent = (evt) => {
   return evt.key === ('Escape' || 'Esc');
