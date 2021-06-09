@@ -2,8 +2,13 @@
   padding-top: 7.188em;
 
   @media screen and (max-width: 767px) {
-    //padding-top: 1.875em;
     padding-top: 4em;
+  }
+
+  &:not(:last-of-type) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 4em;
+    }
   }
 
   &__title {
@@ -163,7 +168,7 @@
   &--about {
     .image-section__container {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       padding-left: 5em;
       padding-right: 5em;
@@ -228,7 +233,7 @@
         margin-bottom: 2em;
         width: 50%;
         font: 400 1.25em/1.438em Play;
-        color: #181818;
+        color: #939393;
 
         @media screen and (max-width: 767px) {
           width: 100%;
@@ -264,6 +269,13 @@
               left: 0;
             }
           }
+        }
+      }
+
+      .image-section__static-image {
+        img {
+          margin-top: 10px;
+          height: auto;
         }
       }
     }

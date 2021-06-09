@@ -83,11 +83,20 @@
     }
 
     img {
-      height: auto;
+      max-height: 360px;
+      width: auto;
+
+      @media screen and (max-width: 450px) {
+        max-height: 165px;
+      }
 
       @media screen and (max-width: 767px) {
-        width: 35%;
+        max-height: 250px;
       }
+
+      //@media screen and (max-width: 767px) {
+      //  width: 35%;
+      //}
     }
   }
 
@@ -102,13 +111,16 @@
 
     @media screen and (max-width: 767px) {
       padding-bottom: 0;
-      padding-left: 45%;
+      padding-left: 50%;
       margin-bottom: 20%;
       min-height: 6.25em;
     }
 
     svg {
       margin-right: 1.25em;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
     }
 
     span {

@@ -19,6 +19,14 @@
     }
   }
 
+  &__contacts {
+    padding-right: 4em;
+
+    @media screen and (max-width: 1099px) {
+      padding-right: 1em;
+    }
+  }
+
   &__text {
     font: 400 1.25em/1.75em Play;
     color: #939393;
@@ -141,9 +149,35 @@
         text-align: center;
       }
 
+      a {
+        position: relative;
+        color: #be9f7b;
+
+        &::after {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 0.063em;
+          background-color: #c5a47e;
+          content: '';
+          opacity: 0;
+          transform: translateX(-6.25em);
+          transition: opacity 0.3s, transform .3s;
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+
       label {
         cursor: pointer;
         position: relative;
+        font: 400 1em/1 Play;
 
         &::before {
           content: '';

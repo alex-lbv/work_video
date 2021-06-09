@@ -28,6 +28,18 @@
       }
     }
 
+    h2,
+    h3 {
+      text-align: center;
+      margin-bottom: 2em;
+      font: 400 30px/36px Play;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 767px) {
+        font: 400 20px/20px Play;
+      }
+    }
+
     p {
       margin: 0 auto;
       max-width: 80%;
@@ -44,6 +56,34 @@
 
         @media screen and (max-width: 1099px) {
           margin-bottom: 20px;
+        }
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 30px auto 0;
+      max-width: 80%;
+      list-style: disc;
+
+      @media screen and (max-width: 1099px) {
+        max-width: 95%;
+      }
+
+      li {
+        font: 400 20px/32px Play;
+        color: #939393;
+
+        @media screen and (max-width: 1099px) {
+          font: 400 18px/32px Play;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+
+          @media screen and (max-width: 1099px) {
+            margin-bottom: 20px;
+          }
         }
       }
     }

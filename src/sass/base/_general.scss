@@ -30,16 +30,17 @@ input {
 
 .title {
   display: block;
-  width: 100%;
+  width: 70%;
   position: relative;
   margin: 0;
-  font: 400 6em/1em Play;
+  font: 400 4em/1em Play;
   color: rgba(255, 255, 255, 0.8);
   font-feature-settings: 'pnum' on, 'lnum' on;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   @media screen and (max-width: 767px) {
     font: 400 2.2em/1em Play;
+    width: 100%;
   }
 
   @media screen and (max-width: 1100px) {
@@ -67,7 +68,7 @@ input {
     }
   }
 
-  &.active::after{
+  &.active::after {
     width: 7em;
   }
 }
@@ -123,4 +124,25 @@ input {
 
 .hidden {
   overflow: hidden;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: max-content;
+  max-height: 50px;
+  z-index: 1000;
+  padding: 20px 20px;
+  text-align: center;
+  background: #EAEAEB;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  font: 400 20px/28px Play;
+  color: #353535;
 }
