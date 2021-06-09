@@ -6,6 +6,9 @@ const button = document.querySelector('.btn');
 const services = document.querySelectorAll('.services__card');
 const promotions = document.querySelectorAll('.promotions__item');
 const costButton = document.querySelector('.first-screen__container .btn');
+const filter = document.querySelector('.solutions__filter');
+const filterButtonOpen = document.querySelector('.solutions__filter-btn');
+const filterButtonClose = document.querySelector('.solutions__filter-close');
 
 const windowScroll = () => {
   const state = window.pageYOffset;
@@ -171,4 +174,26 @@ const menuItem = document.querySelector('#menu-item-214');
 
 if (menuItem && window.innerWidth < 1099) {
   menuItem.addEventListener('click', openMenu);
+}
+
+const toggleFilter = () => {
+  filter.classList.toggle('opened');
+  document.body.classList.toggle('hidden');
+};
+
+let oldValue = 0
+let newValue = 0
+
+const windowScrollFilter = () => {
+  const topCoords = document.querySelector('.solutions').getBoundingClientRect().top;
+  const bottomCoords = document.querySelector('.solutions').getBoundingClientRect().bottom
+  newValue = window.pageYOffset;
+  oldValue > newValue && topCoords < -25 && bottomCoords > 750 ? filterButtonOpen.classList.add('sticky') : filterButtonOpen.classList.remove('sticky');
+  oldValue = newValue;
+};
+
+if (window.innerWidth < 1199 && filterButtonOpen) {
+  document.addEventListener('scroll', windowScrollFilter);
+  filterButtonOpen.addEventListener('click', toggleFilter);
+  filterButtonClose.addEventListener('click', toggleFilter);
 }

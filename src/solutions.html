@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./styles/main.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="container header__container">
+        <a href="#" class="header__logo">
+            <img src="https://via.placeholder.com/100x50" alt="Logo">
+        </a>
+        <button type="button" class="header__menu" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="header__navigation">
+            <ul>
+                <li>
+                    <a href="index.html">Главная</a>
+                </li>
+                <li>
+                    <a href="index.html">Услуги</a>
+                </li>
+                <li>
+                    <a href="guarantee.html">Гарантия</a>
+                </li>
+                <li>
+                    <a href="promotions.html">Акции</a>
+                </li>
+                <li>
+                    <a href="works.html">Наши работы</a>
+                </li>
+                <li>
+                    <a href="about.html">О нас</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="first-screen">
+        <div class="container first-screen__container">
+            <h1 class="title">Готовые решения</h1>
+            <button class="btn btn--light" type="button">Узнать стоимость</button>
+        </div>
+    </div>
+
+    <div class="solutions">
+        <div class="container solutions__container">
+            <div class="solutions__filter">
+                <button type="button" class="solutions__filter-close">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/symbol/sprite.svg#close"/>
+                    </svg>
+                </button>
+                <span class="solutions__filter-title">Фильтр</span>
+                <ul class="solutions__filter-list">
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплект видеонаблюдения на 2 камеры</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплект видеонаблюдения на 4 камеры</a>
+                    </li>
+                    <li class="solutions__filter-item solutions__filter-item--active">
+                        <a href="#">Комплект видеонаблюдения на 8 камер</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплект видеонаблюдения на 16 камеры</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">AHD комплекты</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплекс IP видеонаблюдения</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Беспроводные (Wi-Fi) комплекты</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплект видеонаблюдения для улицы</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплекты для дома</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплекты для дачи</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплекты для офиса</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплекты для квартиры</a>
+                    </li>
+                    <li class="solutions__filter-item">
+                        <a href="#">Комплекты для магазина</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="solutions__content">
+                <div class="solutions__header">
+                    <select name="sort" id="sort">
+                        <option value="inexpensive">Сначала дешёвые</option>
+                        <option value="expensive">Сначала дорогие</option>
+                    </select>
+
+                    <button class="solutions__filter-btn" type="button">Фильтр</button>
+                </div>
+
+                <ul class="solutions__list">
+                    <li class="solution">
+                        <div class="solution__image">
+                            <img src="./img/solutions/50656.200.jpg" alt="">
+                        </div>
+                        <div class="solution__container">
+                            <h3 class="solution__title">AHD-Master 8 №2 1 Мп комплект видеонаблюдения AHD формата</h3>
+                            <div class="solution__info">
+                                <ul class="solution__characteristics">
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Арктикул</span>
+                                        <span class="solution__characteristic-data">22222</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Производитель</span>
+                                        <span class="solution__characteristic-data">Master</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Формат сигнала</span>
+                                        <span class="solution__characteristic-data">AHD</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Рабочая температура</span>
+                                        <span class="solution__characteristic-data">-45℃</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Количество камер</span>
+                                        <span class="solution__characteristic-data">8</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Тип камер</span>
+                                        <span class="solution__characteristic-data">корпусная</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Блок питания в комплекте</span>
+                                        <span class="solution__characteristic-data">да</span>
+                                    </li>
+                                </ul>
+
+                                <div class="solution__wrapper">
+                                    <div class="solution__price-wrapper">
+                                        <span class="solution__price solution__price--new">17 799 р.</span>
+                                        <span class="solution__price solution__price--old">20 799 р.</span>
+                                    </div>
+                                    <button class="btn" type="button">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="solution">
+                        <div class="solution__image">
+                            <img src="./img/solutions/50656.200.jpg" alt="">
+                        </div>
+                        <div class="solution__container">
+                            <h3 class="solution__title">AHD-Master 8 №2 1 Мп комплект видеонаблюдения AHD формата</h3>
+                            <div class="solution__info">
+                                <ul class="solution__characteristics">
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Арктикул</span>
+                                        <span class="solution__characteristic-data">22222</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Производитель</span>
+                                        <span class="solution__characteristic-data">Master</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Формат сигнала</span>
+                                        <span class="solution__characteristic-data">AHD</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Рабочая температура</span>
+                                        <span class="solution__characteristic-data">-45℃</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Количество камер</span>
+                                        <span class="solution__characteristic-data">8</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Тип камер</span>
+                                        <span class="solution__characteristic-data">корпусная</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Блок питания в комплекте</span>
+                                        <span class="solution__characteristic-data">да</span>
+                                    </li>
+                                </ul>
+
+                                <div class="solution__wrapper">
+                                    <div class="solution__price-wrapper">
+                                        <span class="solution__price solution__price--new">17 799 р.</span>
+                                        <span class="solution__price solution__price--old">20 799 р.</span>
+                                    </div>
+                                    <button class="btn" type="button">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="solution">
+                        <div class="solution__image">
+                            <img src="./img/solutions/50656.200.jpg" alt="">
+                        </div>
+                        <div class="solution__container">
+                            <h3 class="solution__title">AHD-Master 8 №2 1 Мп комплект видеонаблюдения AHD формата</h3>
+                            <div class="solution__info">
+                                <ul class="solution__characteristics">
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Арктикул</span>
+                                        <span class="solution__characteristic-data">22222</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Производитель</span>
+                                        <span class="solution__characteristic-data">Master</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Формат сигнала</span>
+                                        <span class="solution__characteristic-data">AHD</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Рабочая температура</span>
+                                        <span class="solution__characteristic-data">-45℃</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Количество камер</span>
+                                        <span class="solution__characteristic-data">8</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Тип камер</span>
+                                        <span class="solution__characteristic-data">корпусная</span>
+                                    </li>
+                                    <li class="solution__characteristic">
+                                        <span class="solution__characteristic-name">Блок питания в комплекте</span>
+                                        <span class="solution__characteristic-data">да</span>
+                                    </li>
+                                </ul>
+
+                                <div class="solution__wrapper">
+                                    <div class="solution__price-wrapper">
+                                        <span class="solution__price solution__price--new">17 799 р.</span>
+                                        <span class="solution__price solution__price--old">20 799 р.</span>
+                                    </div>
+                                    <button class="btn" type="button">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="pagination">
+                    <!--   пагинация   -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer__container">
+        <ul class="footer__list">
+            <li>
+                <a href="#">Главная</a>
+            </li>
+            <li>
+                <a href="#">Гарантия</a>
+            </li>
+            <li>
+                <a href="#">Акции</a>
+            </li>
+            <li>
+                <a href="#">Наши работы</a>
+            </li>
+            <li>
+                <a href="#">Контакты</a>
+            </li>
+        </ul>
+        <div class="footer__text">
+            <span>© Все права защищены</span>
+        </div>
+    </div>
+</footer>
+
+<div class="cost">
+    <div class="cost__bg"></div>
+    <div class="container">
+        <form class="cost__form" action="">
+            <h3 class="subtitle">Оставьте заявку</h3>
+            <p class="cost__description">Мы поможем вам рассчитать стоимость в течении 5 минут</p>
+            <div class="cost__form-inputs">
+                <label>
+                    <input type="text" placeholder="Ваше Имя">
+                </label>
+                <label>
+                    <input type="tel" placeholder="Номер телефона">
+                </label>
+            </div>
+            <div class="cost__privacy-policy">
+                <input class="visually-hidden" id="privacy-policy-cost" type="checkbox" checked>
+                <label for="privacy-policy-cost">Я согласен(а) с политикой конфиденциальности<br/>и обработку
+                    данных</label>
+            </div>
+            <button class="btn btn--light" type="submit">Заказать консультацию</button>
+            <button type="button" class="cost__close">
+                <svg width="24" height="24">
+                    <use xlink:href="img/symbol/sprite.svg#close"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js" type="module"></script>
+</body>
+</html>
