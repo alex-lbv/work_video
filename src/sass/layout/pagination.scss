@@ -1,3 +1,45 @@
-.pagination {
+.page-numbers {
+  display: flex;
+  justify-content: center;
 
+  li {
+
+  }
+
+  span,
+  a {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    color: rgba(24, 24, 24, 1);
+  }
+
+  a {
+    font: 400 16px/24px Play;
+  }
+
+  span {
+    font: 700 16px/24px Play;
+    background-color: #EAEAEB;
+  }
+
+  .dots {
+    background-color: transparent;
+    font-weight: 500;
+  }
+
+  .next {
+    background: url("../img/arrow-pagination.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+  }
+
+  .prev {
+    transform: rotate(180deg);
+    background: url("../img/arrow-pagination.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+  }
 }

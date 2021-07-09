@@ -7,11 +7,21 @@
     flex-direction: column;
   }
 
+  @media screen and (min-width: 1200px) {
+    width: 90%;
+  }
+
   &:not(:first-of-type) {
     padding-top: 49px;
   }
 
+  &__container {
+    flex: 1;
+  }
+
   &__image {
+    display: flex;
+    align-items: center;
     margin-right: 40px;
     width: 219px;
     border: 1px solid #939393;
@@ -86,9 +96,9 @@
       border-bottom: 1px dashed #939393;
     }
 
-    &:not(:last-of-type) {
-      margin-bottom: 12px;
-    }
+    //&:not(:last-of-type) {
+    //  margin-bottom: 12px;
+    //}
 
     &-name {
       position: relative;
@@ -146,6 +156,13 @@
     font: 400 20px/23px Play;
     color: #FFFFFF;
     background-color: #181818;
+    border: 1px solid #181818;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    &:hover {
+      background: transparent;
+      color: #181818;
+    }
 
     @media screen and (max-width: 1200px) {
       max-width: 311px;
