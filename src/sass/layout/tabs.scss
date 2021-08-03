@@ -24,7 +24,7 @@
   .tab-wrapper {
     width: 80%;
     margin: 0 auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -56,7 +56,8 @@
 
     p {
       font: 400 20px/32px Play;
-      color: #939393;
+      //color: #939393;
+      color: #5c5b5b;
 
       @media screen and (max-width: 767px) {
         font: 400 17px/32px Play;

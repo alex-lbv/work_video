@@ -32,4 +32,15 @@
       background-color: #353535;
     }
   }
+
+  &--white {
+    color: #ffffff;
+    border: 0.063em solid #ffffff;
+    max-width: 17em;
+
+    &:hover {
+      background-color: #BE9F7B;
+      border-color: #BE9F7B;
+    }
+  }
 }

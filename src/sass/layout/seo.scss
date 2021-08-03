@@ -1,0 +1,133 @@
+.seo {
+  padding: 40px 0 50px;
+  background-color: #FDFAFA;
+
+  @media screen and (min-width: 1200px){
+    padding: 80px 0 100px;
+  }
+
+  .container {
+    @media screen and (min-width: 1200px){
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0 0 36px 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    font: 400 40px/46.28px Play;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      font: 400 30px/30px Play;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin: auto;
+      width: 3em;
+      height: .05em;
+      bottom: -.4em;
+      left: 0;
+      right: 0;
+      background-color: #BE9F7B;
+    }
+  }
+
+  &__description {
+    padding: 0 10px;
+    font: 400 18px/28px Play;
+    color: #5c5b5b;
+
+    @media screen and (min-width: 1200px){
+      padding: 0 20px;
+      font: 400 20px/32px Play;
+    }
+  }
+
+  &__header {
+    margin: 0 auto 40px auto;
+    width: 95%;
+
+    @media screen and (min-width: 1200px){
+      width: 80%;
+    }
+
+    .seo__description {
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    margin: 0 0 25px 0;
+    max-width: 100%;
+    height: auto;
+
+    @media screen and (min-width: 1200px){
+      margin: 0 0 45px 0;
+    }
+  }
+
+  &__list {
+    padding-top: 40px;
+
+    @media screen and (min-width: 1200px){
+      padding-top: 80px;
+    }
+
+    .seo__title {
+      margin-bottom: 40px;
+
+      @media screen and (min-width: 1200px){
+        margin-bottom: 80px;
+      }
+    }
+
+    ul {
+
+    }
+
+    &-item {
+      position: relative;
+      padding: 0 10px;
+
+      @media screen and (min-width: 768px){
+        padding: 0 100px;
+      }
+
+      &::before {
+        @media screen and (min-width: 768px){
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 60px;
+          height: 1px;
+          background-color: #BE9F7B;
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 40px;
+      }
+
+      p {
+        font: 400 18px/28px Play;
+        color: #5c5b5b;
+
+        @media screen and (min-width: 1200px){
+          font: 400 20px/32px Play;
+        }
+      }
+    }
+  }
+}

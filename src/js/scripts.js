@@ -6,6 +6,7 @@ const button = document.querySelector('.btn');
 const services = document.querySelectorAll('.services__card');
 const promotions = document.querySelectorAll('.promotions__item');
 const costButton = document.querySelector('.first-screen__container .btn');
+const servicesButton = document.querySelector('.services__form .btn')
 const filter = document.querySelector('.solutions__filter');
 const filterButtonOpen = document.querySelector('.solutions__filter-btn');
 const filterButtonClose = document.querySelector('.solutions__filter-close');
@@ -126,7 +127,13 @@ const cost = document.querySelector('.cost');
 const costBtnClose = cost.querySelector('.cost__close');
 const costBg = cost.querySelector('.cost__bg');
 
-costButton.addEventListener('click', openPopup);
+
+if (costButton) {
+  costButton.addEventListener('click', openPopup);
+}
+if (servicesButton){
+  servicesButton.addEventListener('click', openPopup);
+}
 costBg.addEventListener('click', closePopup);
 costBtnClose.addEventListener('click', closePopup);
 
@@ -157,7 +164,6 @@ const maskPhone =(selector, masked = '+7 (___) ___-__-__') => {
     if (event.type === "blur" && this.value.length < 5) {
       this.value = "";
     }
-
   }
 
   for (const elem of elements) {
@@ -165,7 +171,6 @@ const maskPhone =(selector, masked = '+7 (___) ___-__-__') => {
     elem.addEventListener("focus", mask);
     elem.addEventListener("blur", mask);
   }
-
 }
 
 maskPhone('input[type="tel"]');

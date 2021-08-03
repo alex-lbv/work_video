@@ -39,7 +39,8 @@
       a {
         color: #353535;
 
-        @media screen and (max-width: 767px) {
+        //@media screen and (max-width: 767px) {
+        @media screen and (max-width: 1200px) {
           color: #FFFFFF;
         }
       }
@@ -60,6 +61,10 @@
         }
       }
     }
+
+    .header__phone {
+      color: #353535;
+    }
   }
 
   &__container {
@@ -79,7 +84,8 @@
   }
 
   &__navigation {
-    @media screen and (max-width: 767px) {
+    //@media screen and (max-width: 767px) {
+    @media screen and (max-width: 1200px) {
       position: absolute;
       top: 0;
       left: 0;
@@ -90,6 +96,10 @@
       transition: transform .3s ease-in;
     }
 
+    @media screen and (min-width: 1200px) {
+      margin: auto 3em auto auto
+    }
+
     &.opened {
       transform: translateY(0);
     }
@@ -98,8 +108,9 @@
       display: flex;
       align-items: center;
 
-      @media screen and (max-width: 767px) {
-        padding-top: 45%;
+      //@media screen and (max-width: 767px) {
+      @media screen and (max-width: 1200px) {
+        padding-top: 7em;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -111,7 +122,8 @@
       &:not(:last-of-type) {
         margin-right: 2em;
 
-        @media screen and (max-width: 767px) {
+        //@media screen and (max-width: 767px) {
+        @media screen and (max-width: 1200px) {
           margin-right: 0;
           margin-bottom: 2em;
         }
@@ -143,7 +155,8 @@
         transition: opacity 0.3s, transform .3s;
       }
 
-      @media screen and (max-width: 767px) {
+      //@media screen and (max-width: 767px) {
+      @media screen and (max-width: 1200px) {
         font: 400 1.5em/1.125em Play;
       }
     }
@@ -154,9 +167,14 @@
     width: 1.5em;
     height: 1.5em;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1200px) {
       display: block;
+      order: 2;
     }
+
+    //@media screen and (max-width: 767px) {
+    //  display: block;
+    //}
 
     &.opened {
       z-index: 10;
@@ -208,6 +226,26 @@
           margin-bottom: 5px;
         }
       }
+    }
+  }
+
+  &__phone {
+    width: max-content;
+    position: relative;
+    font: 400 1.2em/1.125em Play;
+    color: #ffffff;
+
+    @media screen and (max-width: 375px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: auto 1em auto auto;
+    }
+
+    @media screen and (max-width: 1200px) {
+      order: 1;
+      margin: auto 3em auto auto;
     }
   }
 }

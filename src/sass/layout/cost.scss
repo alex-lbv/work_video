@@ -44,7 +44,8 @@
   &__description {
     margin: 0 0 48px;
     font: 400 20px/28px Play;
-    color: #939393;
+    //color: #939393;
+    color: #5c5b5b;
   }
 
   .container {
@@ -106,7 +107,8 @@
         }
 
         &::placeholder {
-          color: #939393;
+          //color: #939393;
+          color: #5c5b5b;
         }
       }
     }
