@@ -51,7 +51,6 @@ const swiperReview = new Swiper(".review-swiper", {
   },
   slidesPerView: 1,
   centeredSlides: true,
-  effect: "flip",
   grabCursor: true,
   loop: true,
 });
@@ -131,13 +130,13 @@ const costBg = cost.querySelector('.cost__bg');
 if (costButton) {
   costButton.addEventListener('click', openPopup);
 }
-if (servicesButton){
+if (servicesButton) {
   servicesButton.addEventListener('click', openPopup);
 }
 costBg.addEventListener('click', closePopup);
 costBtnClose.addEventListener('click', closePopup);
 
-const maskPhone =(selector, masked = '+7 (___) ___-__-__') => {
+const maskPhone = (selector, masked = '+7 (___) ___-__-__') => {
   const elements = document.querySelectorAll(selector);
 
   function mask(event) {
@@ -201,4 +200,75 @@ if (window.innerWidth < 1199 && filterButtonOpen) {
   document.addEventListener('scroll', windowScrollFilter);
   filterButtonOpen.addEventListener('click', toggleFilter);
   filterButtonClose.addEventListener('click', toggleFilter);
+}
+
+const solutionsList = document.querySelector('.solutions__list');
+
+if (solutionsList) {
+  const solutionItems = solutionsList.querySelectorAll('.solution');
+
+  solutionItems.forEach((item) => {
+    const characteristics = item.querySelectorAll('.solution__characteristics > li');
+
+    if (characteristics.length > 7) {
+      const seeAllButton = document.createElement('button');
+      seeAllButton.textContent = 'Посмотреть все';
+      seeAllButton.classList.add('solution__btn-see-all');
+
+      characteristics.forEach(() => {
+        item.classList.add('solution--drop');
+        item.querySelector('.solution__container').appendChild(seeAllButton);
+      });
+
+      const defaultList = () => {
+        solutionItems.forEach((solItem) => {
+          if (solItem.classList.contains('solution--opened')) {
+            solItem.classList.remove('solution--opened');
+
+            solutionsList.querySelectorAll('.solution__btn-see-all')
+              .forEach((btn) => {
+                btn.textContent = 'Посмотреть все';
+              });
+          }
+        });
+      };
+
+      const openList = () => {
+        const topCoords = item.getBoundingClientRect().top;
+        setTimeout(() => {
+          window.scrollBy(
+            {
+              top: topCoords - 80,
+              behavior: 'smooth',
+            });
+        }, 300);
+        if (item.classList.contains('solution--drop')) {
+          item.classList.add('solution--opened');
+          seeAllButton.textContent = 'Скрыть';
+
+          seeAllButton.addEventListener('click', hideList);
+          seeAllButton.removeEventListener('click', openList);
+        }
+      };
+
+      const hideList = () => {
+        if (item.classList.contains('solution--opened')) {
+          item.classList.remove('solution--opened');
+          seeAllButton.textContent = 'Посмотреть все'
+          seeAllButton.removeEventListener('click', hideList);
+          seeAllButton.addEventListener('click', openList);
+        }
+        const topCoords = item.getBoundingClientRect().top;
+        setTimeout(() => {
+          window.scrollBy(
+            {
+              top: topCoords - 80,
+              behavior: 'smooth',
+            });
+        }, 300);
+      };
+
+      seeAllButton.addEventListener('click', openList);
+    }
+  });
 }

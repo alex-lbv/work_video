@@ -118,6 +118,12 @@ gulp.task("scripts", function () {
     .pipe(browserSync.stream());
 });
 
+gulp.task("library", function () {
+  return gulp.src("src/library/**/*")
+    .pipe(gulp.dest("build/library/"))
+    .pipe(browserSync.stream());
+});
+
 gulp.task("serve", function () {
   browserSync.init({
     injectChanges: true,
@@ -133,6 +139,7 @@ gulp.task("serve", function () {
   gulp
     .watch("src/**/*.html", gulp.series("html"))
     .on("change", browserSync.reload);
+  gulp.watch("src/library/**/*", gulp.parallel("library"));
   gulp.watch("src/sass/**/*.scss", gulp.parallel("styles"));
   gulp.watch("src/js/**/*.js", gulp.parallel("scripts"));
   gulp.watch("src/img/**/*", gulp.parallel("images"));
@@ -145,7 +152,7 @@ gulp.task(
   gulp.series(
     "clean",
     "html",
-    gulp.parallel(["styles", "fonts", "images", "video", /*"favicon",*/ "svgSprite", "scripts"]),
+    gulp.parallel(["styles", "fonts", "images", "video", /*"favicon",*/ "library", "svgSprite", "scripts"]),
     gulp.parallel("serve")
   )
 );

@@ -40,8 +40,14 @@
   &__contacts {
     display: flex;
     flex-direction: column;
+    //background: linear-gradient(180deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.7) 100%),
+    //url("../img/contacts.jpg");
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.7) 100%),
-    url("../img/contacts.jpg");
+    image-set(
+                    url("../img/contacts.webp") 2x,
+                    url("../img/contacts.jpg") 2x,
+                    url("../img/contacts.webp") 1x,
+                    url("../img/contacts.jpg") 1x);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -90,7 +96,7 @@
         content: '';
         opacity: 0;
         transform: translateX(-6.25em);
-        transition: opacity 0.3s,transform .3s;
+        transition: opacity 0.3s, transform .3s;
       }
 
       @media screen and (max-width: 1099px) {
