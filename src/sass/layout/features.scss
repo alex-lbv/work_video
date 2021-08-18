@@ -13,9 +13,14 @@
   }
 
   &__container {
+    padding-top: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 1099px) {
+      padding-top: 5em;
+    }
   }
 
   &__list {

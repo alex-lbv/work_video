@@ -45,7 +45,8 @@
       max-width: 80%;
       font: 400 20px/32px Play;
       //color: #939393;
-      color: #5c5b5b;
+      //color: #5c5b5b;
+      color: #353535;
 
       @media screen and (max-width: 1099px) {
         max-width: 95%;
@@ -58,6 +59,10 @@
         @media screen and (max-width: 1099px) {
           margin-bottom: 20px;
         }
+      }
+
+      a {
+        color: #be9f7b;
       }
     }
 

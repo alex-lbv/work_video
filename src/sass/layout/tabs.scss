@@ -57,10 +57,15 @@
     p {
       font: 400 20px/32px Play;
       //color: #939393;
-      color: #5c5b5b;
+      //color: #5c5b5b;
+      color: #353535;
 
       @media screen and (max-width: 767px) {
         font: 400 17px/32px Play;
+      }
+
+      a {
+        color: #be9f7b;
       }
     }
   }

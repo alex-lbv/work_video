@@ -122,7 +122,8 @@
     }
 
     .info__text {
-      color: #5c5b5b;
+      //color: #5c5b5b;
+      color: #353535;
     }
 
     form {
@@ -147,7 +148,8 @@
 
         &::placeholder {
           //color: #939393;
-          color: #5c5b5b;
+          //color: #5c5b5b;
+          color: #353535;
         }
       }
     }

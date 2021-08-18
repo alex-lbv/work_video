@@ -125,13 +125,19 @@ button.addEventListener('mouseout', titleActive);
 const cost = document.querySelector('.cost');
 const costBtnClose = cost.querySelector('.cost__close');
 const costBg = cost.querySelector('.cost__bg');
-
+const estimateBtn = document.querySelector('.solutions__announcement .btn--dark')
 
 if (costButton) {
   costButton.addEventListener('click', openPopup);
 }
 if (servicesButton) {
   servicesButton.addEventListener('click', openPopup);
+}
+if (estimateBtn) {
+  estimateBtn.addEventListener('click', (evt => {
+    evt.preventDefault();
+    openPopup();
+  }));
 }
 costBg.addEventListener('click', closePopup);
 costBtnClose.addEventListener('click', closePopup);
